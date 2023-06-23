@@ -14,3 +14,30 @@
 .show {
   display: block;
 }
+
+.black-bg {
+  width : 100%;
+  height : 100%;
+  position : fixed;
+  background : rgba(0,0,0,0.5);
+  z-index : 5;
+  padding: 30px;
+  /* display : none; */
+  /*display는 애니메이션이 잘 동작하지 않는다. ->visiblity로 변경 */
+  visibility: hidden;
+  opacity : 0;
+  transition: all 1s;
+  /* 투명 */
+}
+
+.white-bg {
+  background: white;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.show-modal{
+visibility: visible;
+opacity: 1;
+/* 불투명 */
+}
