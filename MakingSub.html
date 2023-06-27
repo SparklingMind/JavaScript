@@ -40,10 +40,38 @@
     <div class="black-bg">
       <div class="white-bg">
         <h4>로그인하세요</h4>
-        <button class="btn btn-danger" id="close">닫기</button>
+
+        <form action="success.html">  
+          <!-- form 제출될 url -->
+          <div class="my-3">
+            <input type="text" id = "아이디" class="form-control">
+           </div>
+           <div class="my-3">
+             <input type="password" id= "패스워드" class="form-control">
+           </div>
+           <button type="submit" id = "send" class="btn btn-primary">전송</button>
+           <button type="button" id = "close" class="btn btn-danger" id="close">닫기</button>
+        </form> 
+
       </div>
     </div> 
 
+    <script>  
+      
+      $('form').on('submit', function(e){ //form태그 안에서 submit 이벤트 발생시 function 실행.
+        if(document.getElementById('아이디').value == '') { 
+          event.preventDefault();
+          alert('아이디를 입력해주세요.');
+        }else if(document.getElementById('패스워드').value == '') {
+          event.preventDefault();
+          alert('패스워드를 입력해주세요.');
+        }else if(document.getElementById('패스워드').value.length < 6) {
+          alert('비밀번호를 6자 이상 입력해주세요.');
+        }
+      });
+        //alert : 간단한 알림창
+      // 전송버튼 누르면 저기 input에 입력한 값이 공백이면 알림창 띄워주세요~
+    </script>
     <script>
       
 
