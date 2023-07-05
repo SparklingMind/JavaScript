@@ -41,3 +41,11 @@ visibility: visible;
 opacity: 1;
 /* 불투명 */
 }
+
+.black-text {
+  color : black;
+}
+
+.white-text {
+  color : white;
+}
